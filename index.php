@@ -1,21 +1,16 @@
-<?php $metaTitle = "accueil"; ?>
-<?php $metaDescription = "voici ma page accueil" ?>
-
 <?php
-require 'header.php';
+
+$pagefilter = filter_input(INPUT_GET,'page',FILTER_SANITIZE_SPECIAL_CHARS);
+
+if  ($pagefilter  == ''){
+    require 'pages/accueil.php';
+} elseif ($pagefilter == 'contact'){
+    require 'pages/contact.php';
+} elseif ($pagefilter == 'hobby') {
+    require 'pages/hobby.php';
+} else  {
+    echo "ErrorDocument 404 ";
+}
+echo "Vous avez recherché $pagefilter.\n";
+var_dump($pagefilter);
 ?>
-
-
-<body>
-
-<p> cv </p
-<p> cv </p
-<p> cv </p
-
-</body>
-
-<?php
-include'footer.php';
-?>
-
-
