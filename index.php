@@ -1,4 +1,10 @@
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+session_start();
+// déclaration du debut de la session start . on doit mettre dès l'ouverture de la balise php
+// vu que l'index.php est le fichier racine qui relie les autres pages, je déclare ici.
 
 $pagefilter = filter_input(INPUT_GET,'page',FILTER_SANITIZE_URL);
 
@@ -13,6 +19,9 @@ echo "ErrorDocument 404 ";
 }
 //echo "Vous avez recherché $pagefilter.\n";
 //var_dump($pagefilter);
+
+
+
 
 
 ?>

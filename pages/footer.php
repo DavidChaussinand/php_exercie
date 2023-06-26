@@ -15,6 +15,8 @@
 
         </div>
     </div>
+    <!-- rajout du texte pour afficher la valeur de dateFirstVisit suite à la session -->
+    <?= "<h6 class='text-secondary'> Première connexion {$_SESSION['dateFirstVisit']} : Le compteur de vue {$count}</h6>" ?>
 </footer>
 
 

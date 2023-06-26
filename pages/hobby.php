@@ -1,5 +1,17 @@
-<?php   $metaTitle = " hobby"?>
-<?php $metaDescription = "voici ma page hobby" ?>
+<?php   
+
+$metaTitle = " hobby";
+$metaDescription = "voici ma page hobby" ;
+
+// le compteur de vue ***************************
+
+if (!isset($_SESSION['countViewPage'])){
+    $_SESSION['countViewPage'] = 1;
+  } else {
+    $_SESSION['countViewPage']++;
+  }
+  $count = $_SESSION['countViewPage'];
+?>
 
 <?php
 require 'header.php';
